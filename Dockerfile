@@ -18,6 +18,8 @@ RUN rm -rf build
 
 RUN echo eula=true > eula.txt
 
+EXPOSE 25565
+
 VOLUME /mc
 
 CMD java -server -Xms512M -XX:+UseConcMarkSweepGC -jar spigot.jar
