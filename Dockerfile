@@ -10,10 +10,10 @@ USER spigot
 
 RUN wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 
-RUN java -jar BuildTools.jar --rev 1.9.4
+RUN java -jar BuildTools.jar --rev 1.11
 
 WORKDIR ..
-RUN cp build/spigot-1.9.4.jar spigot.jar
+RUN cp build/spigot-1.11.jar spigot.jar
 RUN rm -rf build
 
 RUN echo eula=true > eula.txt
