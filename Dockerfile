@@ -19,4 +19,4 @@ EXPOSE 25565
 
 VOLUME /mc
 
-CMD cp /mc-build/spigot.jar . && java -server -Xms512M -XX:+UseConcMarkSweepGC -jar spigot.jar
+CMD cp /mc-build/spigot-1.11.2.jar ./spigot.jar && java -server -Xms512M -XX:+UseConcMarkSweepGC -jar spigot.jar
