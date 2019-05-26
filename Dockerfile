@@ -3,7 +3,9 @@ FROM ubuntu:18.04 AS base
 RUN apt-get update && \
     apt-get install -y git openjdk-11-jre-headless tar wget
 
-RUN useradd -U -r -d /mc -m spigot && \
+ARG UID=990
+
+RUN useradd -U -u ${UID} -r -d /mc -m spigot && \
     mkdir /mc-build && \
     chown -R spigot:spigot /mc-build /mc
 
